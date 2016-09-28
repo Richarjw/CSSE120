@@ -1,0 +1,7 @@
+MODULES_MANAGER_V2
+m1e_first_robot|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\m1e_first_robot.py
+m2_forward|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\m2_forward.py
+m3_forward_backward_spin|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\m3_forward_backward_spin.py
+m4_sensing_distance|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\m4_sensing_distance.py
+m5_go_for_distance|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\m5_go_for_distance.py
+new_create|C:\EclipseWorkspaces\csse120\Session06_Robots_MovingAndSensing\src\new_create.py

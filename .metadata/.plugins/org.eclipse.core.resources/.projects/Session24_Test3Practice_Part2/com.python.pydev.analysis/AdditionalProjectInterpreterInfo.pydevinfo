@@ -1,0 +1,41 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\EclipseWorkspaces\csse120\.metadata\.plugins\org.eclipse.core.resources\.projects\Session24_Test3Practice_Part2\com.python.pydev.analysis\v2_indexcache
+problem4_test_Elevator|1414965464102|C:\EclipseWorkspaces\csse120\Session24_Test3Practice_Part2\src\problem4_test_Elevator.py
+problem4_Elevator|1415212746762|C:\EclipseWorkspaces\csse120\Session24_Test3Practice_Part2\src\problem4_Elevator.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+5=Person.__init__
+2=problem4_test_Elevator
+4=Elevator
+6=Elevator.__init__
+7=Elevator.all_people_enter
+9=Elevator.remaining_capacity
+8=Elevator.last_people_exit
+1=problem4_Elevator
+3=Person
+-- END DICTIONARY
+-- START TREE 1
+4
+ele|1|Elevator!9@
+mai|2|main!18@main!10@
+per|1|Person!9@
+tes|7|test_last_people_exit!18@test_remaining_capacity!18@test_capacity_exceeded!18@test_elevator_with_oldest!18@test_all_people_enter!18@test_init!18@test_oldest_person!18@
+-- END TREE
+-- START TREE 2
+13
+__i|2|__init__!3&10@__init__!4&10@
+__r|1|__repr__!3&10@
+age|1|age!5&11@
+all|1|all_people_enter!4&10@
+cap|2|capacity!6&11@capacity_exceeded!4&10@
+ele|1|elevator_with_oldest!4&10@
+las|1|last_people_exit!4&10@
+lis|1|listPeople!6&11@
+old|1|oldest_person!4&10@
+peo|3|people!6&11@people!7&11@people!8&11@
+pou|2|pounds!6&11@pounds!9&11@
+rem|1|remaining_capacity!4&10@
+wei|1|weight!5&11@
+-- END TREE

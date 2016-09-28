@@ -1,0 +1,47 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\EclipseWorkspaces\csse120\.metadata\.plugins\org.eclipse.core.resources\.projects\Session18_ImplementingClasses_Part2\com.python.pydev.analysis\v2_indexcache
+m2_Circle|1414681569239|C:\EclipseWorkspaces\csse120\Session18_ImplementingClasses_Part2\src\m2_Circle.py
+m2_test_Circle|1414600043165|C:\EclipseWorkspaces\csse120\Session18_ImplementingClasses_Part2\src\m2_test_Circle.py
+m1e_Point|1413825494868|C:\EclipseWorkspaces\csse120\Session18_ImplementingClasses_Part2\src\m1e_Point.py
+m3_test_Rectangle|1413825494853|C:\EclipseWorkspaces\csse120\Session18_ImplementingClasses_Part2\src\m3_test_Rectangle.py
+m3_Rectangle|1415212749015|C:\EclipseWorkspaces\csse120\Session18_ImplementingClasses_Part2\src\m3_Rectangle.py
+-- END DISKCACHE
+-- START DICTIONARY
+12
+8=Circle
+10=Point.__init__
+1=m2_Circle
+4=m2_test_Circle
+11=Point.move_to
+5=m1e_Point
+6=Rectangle
+7=Point
+12=Point.move_by
+2=m3_test_Rectangle
+3=m3_Rectangle
+9=Circle._init_
+-- END DICTIONARY
+-- START TREE 1
+4
+cir|1|Circle!9@
+mai|4|main!18@main!10@main!26@main!34@
+poi|1|Point!41@
+rec|1|Rectangle!25@
+-- END TREE
+-- START TREE 2
+13
+__i|2|__init__!6&26@__init__!7&42@
+__r|1|__repr__!7&42@
+_in|1|_init_!8&10@
+_re|1|_repr_!8&10@
+cen|1|center!9&11@
+clo|4|clone!7&42@closer_to_origin!8&10@closer_to!7&42@clone!8&10@
+dis|1|distance_from!7&42@
+hal|1|halfway_to!7&42@
+int|1|intersects!8&10@
+mov|3|move_by!7&42@move_to!7&42@move_by!8&10@
+rad|1|radius!9&11@
+x|3|x!10&43@x!11&43@x!12&43@
+y|3|y!10&43@y!11&43@y!12&43@
+-- END TREE

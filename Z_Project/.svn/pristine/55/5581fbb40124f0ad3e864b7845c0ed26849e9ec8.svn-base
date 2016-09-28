@@ -1,0 +1,151 @@
+"""
+The Python Capstone Project.
+
+CSSE 120 - Introduction to Software Development.
+Team members: PUT-YOUR-NAMES_HERE (all of them).
+
+The primary author of this module is: PUT-YOUR-NAME-HERE.
+"""
+# TODO: Put the names of ALL team members in the above where indicated.
+#       Put YOUR NAME in the above where indicated.
+
+import m0
+import m1
+import m2
+import m4
+import random
+import tkinter
+from tkinter import ttk
+import new_create
+# from m1 import DataContainer
+import time
+
+
+def main():
+    """
+    Tests functions in this module.
+    Intended to be used internally by the primary author of this module.
+    """
+    print('-------------------------------')
+    print('Testing functions in module m3:')
+    print('-------------------------------')
+    initial_frame()
+
+def initial_frame():
+    root = tkinter.Tk()
+
+    initial_frame = ttk.Frame(root, padding=(30, 20), relief='raised')
+    initial_frame.grid()
+
+    playNotes_button = ttk.Button(initial_frame, text='Play Notes')
+    playNotes_button.grid()
+    playNotes_button['command'] = lambda: notes_frame()
+
+    moveSensors_button = ttk.Button(initial_frame, text='Move until Sensors')
+    moveSensors_button.grid()
+    moveSensors_button['command'] = lambda: moveSensors_frame()
+
+    root.mainloop()
+
+def notes_frame():
+    """
+    Constructs and returns a Frame (on the given root window)
+    that contains this module's widgets.
+    Also sets up callbacks for this module's widgets.
+
+    Preconditions:
+      :type root: tkinter.Tk
+      :type dc: m0.DataContainer
+    """
+    root = tkinter.Tk()
+
+    main_frame = ttk.Frame(root, padding=(30, 20), relief='raised')
+    main_frame.grid()
+
+    n_entry = ttk.Entry(main_frame, width=3)
+    n_entry.grid(row=1, column=1)
+
+    note_label = ttk.Label(main_frame, text='Press a button to complete a task')
+    note_label.grid()
+
+    note_button = ttk.Button(main_frame, text='Play n Notes')
+    note_button.grid()
+    note_button['command'] = lambda:  playNotes(int(n_entry.get()))
+
+    root.mainloop()
+
+def playNotes(n):
+    # CurrentRobot = m1.Robot.Robot
+    port = 'sim'
+    robot = new_create.Create(port)
+    for k in range(n):
+        robot.playNote(random.randint(31, 127), 50)
+        time.sleep(2)
+
+def moveSensors_frame():
+    root = tkinter.Tk()
+
+    main_frame = ttk.Frame(root, padding=20)
+    main_frame.grid()
+
+    speed_label = ttk.Label(main_frame, text='Enter the speed:')
+    speed_label.grid()
+
+    speed_entry = ttk.Entry(main_frame, width=10)
+    speed_entry.grid()
+
+    run_button = ttk.Button(main_frame, text='Run Robot')
+    run_button.grid()
+    run_button['command'] = lambda: moveSensors(int(speed_entry.get()))
+
+    root.mainloop()
+
+
+
+def moveSensors(speed):
+    port = 'sim'
+    robot = new_create.Create(port)
+    cliff_front_left = new_create.Sensors.cliff_front_left_signal
+    cliff_front_right = new_create.Sensors.cliff_front_right_signal
+    cliff_left = new_create.Sensors.cliff_left_signal
+    cliff_right = new_create.Sensors.cliff_right_signal
+#     cliff_right = new_create.Sensors.bumps_and_wheel_drops
+    while True:
+        robot.driveDirect(speed, speed)
+        time.sleep(3)
+        if(robot.getSensor(cliff_front_left) < 4094 or robot.getSensor(cliff_front_right) < 4094 or robot.getSensor(cliff_left) < 4094 or robot.getSensor(cliff_right) < 4094):
+            break
+#         if(robot.left_bump == 1 or robot.right_bump == 1):
+#             break
+    robot.stop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ----------------------------------------------------------------------
+# If this module is running at the top level (as opposed to being
+# imported by another module), then call the 'main' function.
+# ----------------------------------------------------------------------
+if __name__ == '__main__':
+    main()

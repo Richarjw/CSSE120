@@ -1,0 +1,191 @@
+"""
+The Python Capstone Project.
+
+CSSE 120 - Introduction to Software Development.
+Team members: Ryan Coffman, Joe Jagiella, Jack Richard (all of them).
+
+The primary author of this module is: Ryan Coffman.
+"""
+# DONE: Put the names of ALL team members in the above where indicated.
+#       Put YOUR NAME in the above where indicated.
+
+# import m0
+# import m1
+# import m3
+# import m4
+
+import tkinter
+from tkinter import ttk
+import new_create
+
+
+def main():
+    """
+    Tests functions in this module.
+    Intended to be used internally by the primary author of this module.
+    """
+    print('-------------------------------')
+    print('Testing functions in module m2:')
+    print('-------------------------------')
+
+    initial_frame()
+
+def initial_frame():
+    root = tkinter.Tk()
+
+    main_frame = ttk.Frame(root, padding=(30, 10), relief='raised')
+    main_frame.grid()
+
+    hours_button = ttk.Button(main_frame, text='Hours')
+    hours_button.grid()
+
+    tele_button = ttk.Button(main_frame, text='Be tele-operated')
+    tele_button.grid()
+
+    hours_button['command'] = lambda: run_my_frame()
+    tele_button['command'] = lambda: run_be_tele_operated()
+
+    root.mainloop()
+
+def run_my_frame():
+
+    my_frame()
+
+def my_frame():
+    """
+    Constructs and returns a Frame (on the given root window)
+    that contains this module's widgets.
+    Also sets up callbacks for this module's widgets.
+
+    Preconditions:
+      :type root: tkinter.Tk
+      :type dc: m0.DataContainer
+    """
+    root = tkinter.Tk()
+
+    main_frame = ttk.Frame(root, padding=(30, 10), relief='raised')
+    main_frame.grid()
+
+    joe_button = ttk.Button(main_frame, text='Joe')
+    joe_button.grid()
+
+    ryan_button = ttk.Button(main_frame, text='Ryan')
+    ryan_button.grid()
+
+    jack_button = ttk.Button(main_frame, text='Jack')
+    jack_button.grid()
+
+    hours_label = ttk.Label(main_frame, text='Press a button to see the number of hours')
+    hours_label.grid()
+
+    joe_button['command'] = lambda: hours_worked('hours-1.txt', hours_label, 'Joe')
+    ryan_button['command'] = lambda: hours_worked('hours-2.txt', hours_label, 'Ryan')
+    jack_button['command'] = lambda:  hours_worked('hours-3.txt', hours_label, 'Jack')
+
+    root.mainloop()
+
+def hours_worked(file_name, label, name):
+    """
+    formats the test string to say how many hours each person has worked
+    """
+    number_of_hours = 0
+    with open(file_name) as f:
+        line = f.readline()
+        while line != "":
+            number_of_hours += float(line)
+            line = f.readline()
+        f.close()
+    format_string = name + ' has worked ' + str(number_of_hours) + ' hours'
+    label['text'] = format_string
+
+
+def run_be_tele_operated():
+
+    be_tele_operated()
+
+def be_tele_operated():
+
+    root = tkinter.Tk()
+
+    port = 'sim'
+    robot = new_create.Create(port)
+
+    main_frame = ttk.Frame(root, padding=20)
+    main_frame.grid()
+
+    speed_label = ttk.Label(main_frame, text='Enter the speed:')
+    speed_label.grid()
+
+    speed_entry = ttk.Entry(main_frame, width=10)
+    speed_entry.grid()
+
+    forward_button = ttk.Button(main_frame, text='Forward')
+    forward_button.grid()
+
+    backward_button = ttk.Button(main_frame, text='Backward')
+    backward_button.grid()
+
+    spin_left_button = ttk.Button(main_frame, text='Spin Left')
+    spin_left_button.grid()
+
+    spin_right_button = ttk.Button(main_frame, text='Spin Right')
+    spin_right_button.grid()
+
+    forward_button['command'] = lambda: go_foward_button()
+    backward_button['command'] = lambda: go_backward_button()
+    spin_left_button['command'] = lambda: spin_left_button()
+    spin_right_button['command'] = lambda: spin_right_button()
+
+    root.bind_all('<KeyPress>', lambda event: pressed_a_key(event, robot))
+    root.bind_all('<KeyRelease>', lambda event: released_a_key(event, robot))
+
+    root.mainloop()
+
+def pressed_a_key(event, robot):
+
+    print('You pressed the', event.keysym, 'key')
+
+
+def released_a_key(event, robot):
+
+    print('You released the', event.keysym, 'key')
+
+
+def go_foward_button(event, robot):
+
+    robot.driveDirect()
+
+
+def go_backward_button(event=None):
+
+    if event == None:
+        print('Button press: ', end='')
+    else:
+        print('You pressed the ' + event.keysym + ' key: ', end='')
+    print('Go right!')
+
+
+def spin_left_button(event=None):
+
+    if event == None:
+        print('Button press: ', end='')
+    else:
+        print('You pressed the ' + event.keysym + ' key: ', end='')
+    print('Spin!')
+
+def spin_right_button(event=None):
+
+    if event == None:
+        print('Button press: ', end='')
+    else:
+        print('You pressed the ' + event.keysym + ' key: ', end='')
+    print('Spin!')
+
+
+
+# ----------------------------------------------------------------------
+# If this module is running at the top level (as opposed to being
+# imported by another module), then call the 'main' function.
+# ----------------------------------------------------------------------
+if __name__ == '__main__':
+    main()

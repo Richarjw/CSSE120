@@ -1,0 +1,92 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\EclipseWorkspaces\csse120\.metadata\.plugins\org.eclipse.core.resources\.projects\Session03_LoopsAndUsingObjects\com.python.pydev.analysis\v2_indexcache
+m4_loops|1410372670030|C:\EclipseWorkspaces\csse120\Session03_LoopsAndUsingObjects\src\m4_loops.py
+m2_using_objects|1410375324522|C:\EclipseWorkspaces\csse120\Session03_LoopsAndUsingObjects\src\m2_using_objects.py
+m1e_using_objects_and_zellegraphics|1410371261671|C:\EclipseWorkspaces\csse120\Session03_LoopsAndUsingObjects\src\m1e_using_objects_and_zellegraphics.py
+m3e_loops|1410371261680|C:\EclipseWorkspaces\csse120\Session03_LoopsAndUsingObjects\src\m3e_loops.py
+rosegraphics|1410371261694|C:\EclipseWorkspaces\csse120\Session03_LoopsAndUsingObjects\src\rosegraphics.py
+-- END DISKCACHE
+-- START DICTIONARY
+27
+11=Shape
+2=m2_using_objects
+16=RoseCanvas.__init__
+7=RoseWidget
+15=Rectangle
+5=m4_loops
+19=RoseWidget.__init__
+20=Circle.__init__
+21=Line.__init__
+4=m3e_loops
+1=rosegraphics
+23=Keyboard.__init__
+24=Rectangle.__init__
+6=RoseWindow
+14=Circle
+3=m1e_using_objects_and_zellegraphics
+26=Mouse._update
+10=Keyboard
+8=RoseCanvas
+12=Point
+22=Shape.__init__
+13=Line
+17=RoseWindow.__init__
+27=Point.__init__
+9=Mouse
+25=Mouse.__init__
+18=RoseWindow.close
+-- END DICTIONARY
+-- START TREE 1
+15
+_ma|1|_master_Tk!11@
+cir|2|Circle!9@circle_and_rectangle!18@
+exa|3|example3!26@example1!26@example2!26@
+key|1|Keyboard!9@
+lin|2|Line!9@lines!18@
+loo|2|loop_more_than_one_way!34@loop_through_ranges!34@
+mai|5|main!18@main!26@main!34@main!42@main!10@
+mou|1|Mouse!9@
+oly|1|olympic_rings!18@
+poi|1|Point!9@
+pri|5|print_square_roots!42@print_sequence1!42@print_sequence2!42@print_decimals!42@print_sequence3!42@
+rec|1|Rectangle!9@
+ros|3|RoseWindow!9@RoseCanvas!9@RoseWidget!9@
+sha|1|Shape!9@
+two|1|two_circles!18@
+-- END TREE
+-- START TREE 2
+32
+__i|10|__init__!6&10@__init__!7&10@__init__!8&10@__init__!9&10@__init__!10&10@__init__!11&10@__init__!12&10@__init__!13&10@__init__!14&10@__init__!15&10@
+__r|4|__repr__!12&10@__repr__!13&10@__repr__!14&10@__repr__!15&10@
+_co|1|_configure_representation_for!8&10@
+_ma|1|_make_representation_for!8&10@
+_on|2|_on_key_press!6&10@_on_mouse_click!6&10@
+_tk|1|_tkinter_canvas!16&11@
+_to|2|_toplevel!17&11@_toplevel!18&11@
+_up|2|_update!9&10@_update!10&10@
+_wi|1|_window!19&11@
+att|1|attach_to!11&10@
+cen|1|center!20&11@
+clo|2|close!6&10@close_on_mouse_click!6&10@
+end|1|end!21&11@
+fil|1|fill_color!22&11@
+fin|2|find_midpoint!13&10@find_center!15&10@
+get|1|get_next_mouse_click!6&10@
+key|2|key_pressed!23&11@keyboard!17&11@
+mai|1|main_canvas!17&11@
+mou|1|mouse!17&11@
+one|1|one_corner!24&11@
+opp|1|opposite_corner!24&11@
+out|2|outline_color!22&11@outline_thickness!22&11@
+pos|2|position!25&11@position!26&11@
+rad|1|radius!20&11@
+ren|2|render!6&10@render!8&10@
+sha|1|shapes_on_canvas!16&11@
+sta|1|start!21&11@
+thi|1|thickness!21&11@
+upd|1|update!6&10@
+wid|1|widgets!17&11@
+x|1|x!27&11@
+y|1|y!27&11@
+-- END TREE

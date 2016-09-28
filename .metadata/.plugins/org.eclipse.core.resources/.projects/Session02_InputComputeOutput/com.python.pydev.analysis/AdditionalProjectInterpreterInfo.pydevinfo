@@ -1,0 +1,44 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\EclipseWorkspaces\csse120\.metadata\.plugins\org.eclipse.core.resources\.projects\Session02_InputComputeOutput\com.python.pydev.analysis\v2_indexcache
+m0e_input_compute_output|1410199873544|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m0e_input_compute_output.py
+m3_practice_fixing_errors|1410201072757|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m3_practice_fixing_errors.py
+m5e_calling_functions_defined_in_YOUR_code|1410199873527|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m5e_calling_functions_defined_in_YOUR_code.py
+m8_more_practice|1410202760105|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m8_more_practice.py
+m2_input_compute_output|1410200764209|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m2_input_compute_output.py
+m4_calling_functions_with_arguments|1410201714322|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m4_calling_functions_with_arguments.py
+m6_calling_functions_defined_in_YOUR_code|1410202396558|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m6_calling_functions_defined_in_YOUR_code.py
+m7_more_practice_fixing_errors|1410202484584|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m7_more_practice_fixing_errors.py
+m1e_input_compute_output_in_functions|1410199873540|C:\EclipseWorkspaces\csse120\Session02_InputComputeOutput\src\m1e_input_compute_output_in_functions.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+7=m0e_input_compute_output
+1=m3_practice_fixing_errors
+8=m5e_calling_functions_defined_in_YOUR_code
+6=m8_more_practice
+3=m2_input_compute_output
+4=m6_calling_functions_defined_in_YOUR_code
+5=m4_calling_functions_with_arguments
+9=m7_more_practice_fixing_errors
+2=m1e_input_compute_output_in_functions
+-- END DICTIONARY
+-- START TREE 1
+13
+cir|1|circle_area!10@
+con|2|convert_to_fahrenheit!18@convert_to_celsius!18@
+cyl|1|cylinder_volume!26@
+do_|2|do_shared_factors!34@do_sums!34@
+inp|1|input_angle!42@
+mai|9|main!18@main!10@main!42@main!34@main!26@main!50@main!58@main!66@main!74@
+num|1|number_of_shared_factors!34@
+pri|6|print_distance_to_origin!50@print_farewell!74@print_greeting!74@print_exp!66@print_greeting!10@print_logarithm!50@
+rai|1|raise_to_power!26@
+ran|1|random_stuff!42@
+rec|1|rectangle_area!26@
+ret|1|return_exp!66@
+sum|1|sum_of_digits!34@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

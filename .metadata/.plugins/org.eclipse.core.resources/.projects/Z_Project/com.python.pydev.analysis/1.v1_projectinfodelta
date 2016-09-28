@@ -1,0 +1,16 @@
+INSTUPm0
+C:\EclipseWorkspaces\csse120\Z_Project\src\m0.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&3|9|2|5&&3|10|2|5&&3|11|2|5&&3|4|2|0&&3|12|2|0&&2|13|2|0
+m0=2
+black=9
+main=13
+follow=8
+speed=7
+DataContainer=1
+list_of_notes=11
+s=12
+white=10
+DataContainer.__init__=5
+__init__=3
+Robot=4
+list_of_waypoints=6

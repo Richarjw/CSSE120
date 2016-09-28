@@ -1,0 +1,88 @@
+"""
+The Python Capstone Project.
+
+CSSE 120 - Introduction to Software Development.
+Team members: Ryan Coffman, Joe Jagiella, Jack Richard (all of them).
+
+The primary author of this module is: Ryan Coffman.
+"""
+# DONE: Put the names of ALL team members in the above where indicated.
+#       Put YOUR NAME in the above where indicated.
+
+# import m0
+# import m1
+# import m3
+# import m4
+
+import tkinter
+from tkinter import ttk
+import new_create
+
+
+def main():
+    """
+    Tests functions in this module.
+    Intended to be used internally by the primary author of this module.
+    """
+    print('-------------------------------')
+    print('Testing functions in module m2:')
+    print('-------------------------------')
+
+    my_frame()
+
+
+def my_frame():
+    """
+    Constructs and returns a Frame (on the given root window)
+    that contains this module's widgets.
+    Also sets up callbacks for this module's widgets.
+
+    Preconditions:
+      :type root: tkinter.Tk
+      :type dc: m0.DataContainer
+    """
+    root = tkinter.Tk()
+
+    main_frame = ttk.Frame(root, padding=(30, 10), relief='raised')
+    main_frame.grid()
+
+    joe_button = ttk.Button(main_frame, text='Joe')
+    joe_button.grid()
+
+    ryan_button = ttk.Button(main_frame, text='Ryan')
+    ryan_button.grid()
+
+    jack_button = ttk.Button(main_frame, text='Jack')
+    jack_button.grid()
+
+    hours_label = ttk.Label(main_frame, text='Press a button to see the number of hours')
+    hours_label.grid()
+
+    joe_button['command'] = lambda: hours_worked('hours-1.txt', hours_label, 'Joe')
+    ryan_button['command'] = lambda: hours_worked('hours-2.txt', hours_label, 'Ryan')
+    jack_button['command'] = lambda:  hours_worked('hours-3.txt', hours_label, 'Jack')
+
+    root.mainloop()
+
+def hours_worked(file_name, label, name):
+    """
+    
+    """
+    number_of_hours = 0
+    with open(file_name) as f:
+        line = f.readline()
+        while line != "":
+            number_of_hours += float(line)
+            line = f.readline()
+        f.close()
+    format_string = name + ' has worked ' + str(number_of_hours) + ' hours'
+    label['text'] = format_string
+
+
+
+# ----------------------------------------------------------------------
+# If this module is running at the top level (as opposed to being
+# imported by another module), then call the 'main' function.
+# ----------------------------------------------------------------------
+if __name__ == '__main__':
+    main()

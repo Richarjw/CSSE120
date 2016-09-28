@@ -1,0 +1,14 @@
+INSTUPm3
+C:\EclipseWorkspaces\csse120\Z_Project\src\m3.py
+INFOS:&&2|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0&&2|11|2|0
+moveSensors=7
+m3=2
+initial_frame=3
+playNotes=5
+conversation_frame=9
+main=1
+follow_stop=8
+talk=10
+notes_frame=4
+moveSensors_frame=6
+listen=11

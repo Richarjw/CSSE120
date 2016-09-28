@@ -1,0 +1,110 @@
+"""
+The Python Capstone Project.
+
+CSSE 120 - Introduction to Software Development.
+Team members: PUT-YOUR-NAMES_HERE (all of them).
+
+The primary author of this module is: PUT-YOUR-NAME-HERE.
+"""
+# TODO: Put the names of ALL team members in the above where indicated.
+#       Put YOUR NAME in the above where indicated.
+
+import m0
+import m2
+import m3
+import m4
+
+import tkinter
+from tkinter import ttk
+import new_create
+import time
+s = ''
+
+class DataContainer():
+    def __init__(self):
+        self.Robot = None
+
+Robot = DataContainer()
+# robot = Robot.Robot # This does not work
+def main():
+    """
+    Tests functions in this module.
+    Intended to be used internally by the primary author of this module.
+    """
+    print('-------------------------------')
+    print('Testing functions in module m1:')
+    print('-------------------------------')
+    Robot.Robot = None
+    # Make a window.
+    root = tkinter.Tk()
+    # Put a Frame on it.
+    main_frame = my_frame(root, m0.DataContainer(), s)
+    main_frame.grid()
+
+    # The rest of it is part of the frame.
+    root.mainloop()
+    Robot.Robot.shutdown()
+
+def my_frame(root, dc, s):
+    """
+    Constructs and returns a Frame (on the given root window)
+    that contains this module's widgets.
+    Also sets up callbacks for this module's widgets.
+
+    Preconditions:
+      :type root: tkinter.Tk
+      :type dc: m0.DataContainer
+    """
+    frame = ttk.Frame(root, padding=(60, 60))
+    # Add a Label and an Entry.
+    label = ttk.Label(frame, text='Enter the port:')
+    label.grid(row=1, column=0)
+
+    entry = ttk.Entry(frame, width=8)
+    entry.grid(row=1, column=1)
+
+    # Put a Button on the frame.
+    # Make your Button do something with the Label and Entry.
+    button2 = ttk.Button(frame, text='Connect to the Robot')
+    button2.grid()
+    button2['command'] = lambda: try_connect(entry.get())
+
+    button3 = ttk.Button(frame, text='Disconnect from the Robot')
+    button3.grid()
+    button3['command'] = lambda: disconnect()
+
+
+
+    port_label = ttk.Label(frame, text=s)
+    port_label.grid()
+
+    return frame
+def try_connect(s):
+    # print(s)
+    if type(s) == str and s == 'sim':
+        port = s
+    elif type(s) == str and s != 'sim':
+        port = int(s)
+    else:
+        print('Bad Port')
+        port = None
+    Robot.Robot = new_create.Create(port)
+
+def disconnect():
+    pass
+    '''
+    The connect button disconnects the robot before it connects again,
+    so there is absolutely no reason to code a disconnect button.
+    This is here just in case I need to make one anyway.
+    '''
+def Song():
+    Robot.Robot.playNote(31, 50)
+    time.sleep(2)
+    Robot.Robot.playNote(55, 50)
+
+# ----------------------------------------------------------------------
+# If this module is running at the top level (as opposed to being
+# imported by another module), then call the 'main' function.
+# ----------------------------------------------------------------------
+if __name__ == '__main__':
+    main()
